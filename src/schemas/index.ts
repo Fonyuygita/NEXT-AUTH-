@@ -37,3 +37,15 @@ export const ResetPasswordSchemas=z.object({
     }),
    
 });
+
+
+// new password schema
+
+export const NewPasswordSchema=z.object({
+    password:z.string().min(6, {
+        message:"Password most b more than six characters"
+    }),
+
+
+   
+});

@@ -1,9 +1,9 @@
 import { getVerificationByEmail } from "@/data/verification-token";
 import { v4 as uuidv4 } from "uuid";
 import { db } from "./db";
-import { getPasswordResetTokenByToken, getPasswordResetToneByEmail } from "@/data/password-reset-token";
+import { getPasswordResetTokenByToken, getPasswordResetTokenByEmail } from "@/data/password-reset-token";
 
-// GENERATE PASSWORD RESET TOKEN
+//  GENERATE PASSWORD RESET TOKEN
 
 export const generatePasswordResetToken=async(email:string)=>{
 
@@ -11,9 +11,9 @@ const token=uuidv4();
 const expires=new Date(new Date().getTime() + 3600 * 1000);
 
 // check for token existence
-const existingToken=await getPasswordResetToneByEmail(email);
+const existingToken=await getPasswordResetTokenByEmail(email);
 if(existingToken){
-  await db.passwordResetToken.delete({
+  await db.passwordResetToken.deleteMany({
     where: {
       id: existingToken?.id,
     }, 

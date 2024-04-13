@@ -7,7 +7,7 @@ const resend=new Resend(process.env.RESEND_API_KEY);
 
 export const sendPasswordResetVerification=async(email:string, token?:string)=>{
 
-const reset_link=`http://localhost:3000/auth/new-password?${token}`;
+const reset_link=`http://localhost:3000/auth/new-password?token=${token}`;
 
  
 
@@ -24,7 +24,7 @@ await resend.emails.send({
 
 export const sendVerificationEmail=async(email:string,token:string)=>{
 
-   const confirmed_link=`http://localhost:3000/auth/new-verification?${token}`
+   const confirmed_link=`http://localhost:3000/auth/new-verification?token=${token}`
 
    
 
