@@ -1,4 +1,24 @@
+# Advanced Authentication System with Next.js and Authjs
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+![Screenshot 2024-04-12 041207](https://github.com/Fonyuygita/NEXT-AUTH-/assets/89413571/60a405b8-2f78-4f5d-9dc7-e418dcefe432)
+
+## Technologies Used:
+- Next.js: The React framework for building the application.
+- Authjs: A library for advanced authentication functionalities.
+- Zod: A TypeScript-first schema validation library.
+- Tailwind CSS: A utility-first CSS framework for styling.
+- Shadcn UI: A UI library for creating beautiful interfaces.
+- Bcryptjs: A library for password hashing and verification.
+- TypeScript: A typed superset of JavaScript.
+
+## Features:
+- Login with social media accounts or credentials.
+- Password reset functionality.
+- Email verification.
+- Update email and password.
 
 ## Getting Started
 
